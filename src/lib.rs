@@ -11,6 +11,15 @@ pub fn describe_number(number: i32) -> String {
     format!("{number} is {kind}")
 }
 
+/// Returns whether an integer is even or odd.
+pub fn parity_label(number: i32) -> &'static str {
+    if number % 2 == 0 {
+        return "even";
+    }
+
+    "odd"
+}
+
 #[cfg(test)]
 mod tests {
     use super::describe_number;
@@ -28,5 +37,10 @@ mod tests {
     #[test]
     fn describes_a_negative_number() {
         assert_eq!(describe_number(-3), "-3 is negative");
+    }
+
+    #[test]
+    fn labels_an_even_number() {
+        assert_eq!(super::parity_label(4), "even");
     }
 }
