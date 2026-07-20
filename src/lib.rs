@@ -24,4 +24,9 @@ mod tests {
     fn describes_zero() {
         assert_eq!(describe_number(0), "0 is zero");
     }
+
+    #[test]
+    fn describes_a_negative_number() {
+        assert_eq!(describe_number(-3), "-3 is negative");
+    }
 }
