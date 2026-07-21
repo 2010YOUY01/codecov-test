@@ -1,3 +1,5 @@
+pub mod labels;
+
 /// Returns a short description of an integer.
 pub fn describe_number(number: i32) -> String {
     let kind = if number > 0 {
