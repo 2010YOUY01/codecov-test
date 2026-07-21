@@ -30,8 +30,3 @@ The CI workflow generates `lcov.info` and uploads it with GitHub OIDC, so no
 `CODECOV_TOKEN` repository secret is needed. Coverage status checks are
 informational, and `codecov.yml` asks Codecov to post a detailed comment even
 when coverage does not change.
-
-## Documentation-only coverage experiment
-
-This note intentionally changes no executable code so the Codecov comment can
-demonstrate the `require_changes` setting.
